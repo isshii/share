@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+<textarea id="source">
+
+
+
+class: center, middle, impact
+
+# ディスカッション1
+
+---
+
+## コードコミット
+#### 過去の経験
+Git (Azure DevOps)
+
+#### ブロッカー
+レビューの管理   
+
+#### 解決策
+プルリクエスト機能使った 
+
+---
+## ビルド・テスト
+#### 過去の経験
+Azure DevOps のビルド機能
+
+#### ブロッカー
+ビルド設定が複製しづらくて、フィーチャーブランチの自動ビルドがめんどくさい
+#### 解決策
+Jenkins とかのブランチ連動パイプラインみたいなのやりたかった
+
+---
+## 結合テスト
+#### 過去の経験
+Azure DevOps のリリース機能で開発環境にデプロイ 
+
+#### ブロッカー
+環境ごとに小さい設定差異があって、テストに影響した
+
+#### 解決策
+Infrastructure as code (Windows)。一部 powershell でコード化してた
+
+---
+## 総合テスト
+#### 過去の経験
+Azure DevOps でアーティファクトの出力先を所定の場所にして、そこから手で心を込めてデプロイ
+
+#### ブロッカー
+環境がネットワーク的に独立していて(中継サーバ経由)、人間が手作業でファイルを運搬する必要があった
+
+#### 解決策
+CI/CD パイプラインが統合できる場所をステージングにする（しようとした）
+
+---
+## 本番デプロイ
+#### 過去の経験
+Azure DevOps でアーティファクトの出力先を所定の場所にして、そこから手で心を込めてデプロイ
+
+#### ブロッカー
+環境がネットワーク的に独立していて(中継サーバ経由)、人間が手作業でファイルを運搬する必要があった
+
+#### 解決策
+CI/CD パイプラインが統合できる場所をステージングにする
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+          ratio: '4:3'
+    });
+    </script>
+  </body>
+</html>
